@@ -1,7 +1,8 @@
 header(class=[nav_class || '', "site-header", "grid-container"].join(' '))
   - var homeUrl = `/${I18N.current}`;
   a(href=homeUrl)
-    .logo Unknown
+    .logo
+      != RichText.asText(menu.data.title)
   
   nav
     ul
