@@ -1,0 +1,7 @@
+section.banner.content-section
+  img(src=slice.primary.image.url)
+  div.cta-text
+    != RichText.asText(slice.primary.title)
+  if slice.primary.linkText[0].text
+    a.cta-button(href=Link.url(slice.primary.link, ctx.linkResolver))
+      != RichText.asText(slice.primary.linkText)

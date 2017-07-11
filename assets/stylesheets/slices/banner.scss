@@ -1,0 +1,18 @@
+.banner {
+  position: relative;
+  .cta-text {
+    position: absolute;
+    top: 90px;
+    left: 60px;
+    max-width: 400px;
+    font-size: 30px;
+    line-height: 40px;
+    color: white;
+  }
+  .cta-button {
+    @include button($primary: white, $secondary: #f05033, $border: #f05033, $primaryHover: #f05033, $secondaryHover: white, $borderHover: #f05033);
+    position: absolute;
+    bottom: 90px;
+    left: 60px;
+  }
+}

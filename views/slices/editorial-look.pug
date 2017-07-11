@@ -1,0 +1,12 @@
+.editorial-look(class=slice.primary.text_position)
+  .content
+    .title
+      != RichText.asHtml(slice.primary.title, ctx.linkResolver)
+    .text
+      != RichText.asHtml(slice.primary.text, ctx.linkResolver)
+  .illustration
+    img(src=slice.primary.image.url alt=slice.primary.image.alt)
+    .link
+      span THE LOOK
+      for item in slice.items
+        a(href=Link.url(item.look_link))

@@ -1,0 +1,12 @@
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; 
+  .gallery-item {
+    flex: 0 1 48%;
+  }
+  .gallery-link {
+    margin-top: -20px;
+    text-transform: uppercase;
+  }
+}

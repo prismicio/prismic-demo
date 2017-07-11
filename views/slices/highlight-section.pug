@@ -1,0 +1,12 @@
+.highlight-section
+  .illustration
+    img(src=slice.primary.image.url alt=slice.primary.image.alt)
+  
+  .content
+    .title
+      != RichText.asHtml(slice.primary.title, ctx.linkResolver)
+    .desc
+      != RichText.asHtml(slice.primary.description, ctx.linkResolver)
+    .action
+      a(href=Link.url(slice.primary.button_link))
+        != RichText.asText(slice.primary.button_label)

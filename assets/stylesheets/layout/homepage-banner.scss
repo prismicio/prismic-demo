@@ -1,0 +1,25 @@
+@import '../mixins';
+
+.homepage-banner {
+  margin: 0 0 40px;
+  padding: 10em 0 6em;
+  background-position: center;
+  background-size: cover;
+
+  .banner-content {
+    .banner-title {
+      font-size: 50px;
+      line-height: 50px;
+      color: white;
+    }
+
+    p {
+      font-size: 20px;
+      color: white;
+    }
+
+    .banner-button {
+      @include button($primary: #f05033, $primaryHover: white, $secondaryHover: #f05033, $borderHover: #f05033);
+    }
+  }
+}

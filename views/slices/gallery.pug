@@ -1,0 +1,13 @@
+section.gallery.content-section
+
+  //- Loop through the gallery items
+  each galleryItem in slice.items
+  
+    .gallery-item
+      img(src=galleryItem.image.url)
+      != RichText.asHtml(galleryItem.description, ctx.linkResolver)
+      
+      if ( galleryItem.link && galleryItem.linkText )
+        p.gallery-link
+          a(href=Link.url(galleryItem.link, ctx.linkResolver)) !{galleryItem.linkText}
+

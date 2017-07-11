@@ -1,0 +1,15 @@
+- var backgroundStyle = "background-image: url('" + slice.primary.background_image.url + "')"
+- var classList = [slice.primary.quote_position, slice.primary.quote_style].join(' ')
+
+.banner-look(style=backgroundStyle class=classList)
+  
+  .grid-container
+    .quote-container
+      .quote
+        != RichText.asHtml(slice.primary.quote, ctx.linkResolver)
+      .author
+        != RichText.asHtml(slice.primary.quote_author, ctx.linkResolver)
+    .link
+      span THE LOOK
+      for item in slice.items
+        a(href=Link.url(item.look_link))

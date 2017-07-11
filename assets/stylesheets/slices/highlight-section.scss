@@ -1,0 +1,44 @@
+@import '../mixins';
+
+.highlight-section {
+  margin-bottom: 80px;
+  
+  .illustration {
+    display: inline-block;
+    width: 60%;
+    vertical-align: middle;
+  }
+
+  .content {
+    font-size: 13px;
+    line-height: 1.7;
+    letter-spacing: 0.6;
+    width: 40%;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 50px;
+    box-sizing: border-box;
+    position: relative;
+
+    .title {
+      border-bottom: 3px solid grey;
+      margin-bottom: 30px;
+
+      h2 {
+        position: relative;
+        left: -140px;
+        font-size: 70px;
+        width: 400px;
+        line-height: 80px;
+      }
+    }
+
+    .desc {
+      max-width: 230px;
+    }
+    
+    .action {
+      @include button($primary: #f05033, $primaryHover: white, $secondaryHover: #f05033, $borderHover: #f05033);
+    }
+  }
+}

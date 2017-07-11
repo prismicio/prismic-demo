@@ -1,0 +1,30 @@
+extends ./layout.pug
+
+block variables
+  - var nav_class = 'dark'
+  - var activeDoc = page
+
+block body
+
+  -// Content Section
+  div.grid-container
+
+    -// Display the slices
+    for slice in page.data.body
+      case slice.slice_type
+        when 'highlight_section'
+          include ./slices/highlight-section.pug
+        when 'banner'
+          include ./slices/banner.pug
+        when 'banner_look'
+          include ./slices/banner-look.pug
+        when 'editorial_look'
+          include ./slices/editorial-look.pug
+        when 'text_section'
+          include ./slices/text-section.pug
+        when 'image_slider'
+          include ./slices/image-slider.pug 
+        when 'gallery'
+          include ./slices/gallery.pug
+        when 'video'
+          include ./slices/video.pug

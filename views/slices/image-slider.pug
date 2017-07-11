@@ -1,0 +1,11 @@
+section.slider.content-section
+  
+  ul#image-slider
+    
+    //- Loop through the slider items
+    each sliderItem in slice.items
+      
+      - var imageUrl = sliderItem.image ? sliderItem.image.url : ""
+      
+      li
+        img(src=imageUrl)

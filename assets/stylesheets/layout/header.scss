@@ -1,0 +1,53 @@
+.site-header {
+  height: 30px;
+  padding: 20px 0;
+
+  a {
+    font-weight: 700;
+  }
+  
+  &.dark {
+    a {
+      color: #484d52;
+      
+      &:hover {
+        color: #72767B;
+      }
+    }
+  }
+
+  &.light {
+    a {
+      color: #ffffff;
+      
+      &:hover {
+        color: #c8c9cb;
+      }
+    }
+  }
+  
+  .logo {
+    display: inline-block;
+    font-size: 22px;
+    font-weight: 900;
+  }
+
+  nav {
+    float: right;
+    ul {
+      margin: 0;
+      li {
+        display: inline-block;
+        margin-left: 40px;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 1060px) {
+  .site-header {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

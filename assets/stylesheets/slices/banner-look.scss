@@ -1,0 +1,67 @@
+@import '../mixins';
+
+.banner-look {
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 110px;
+
+  &.dark {
+    .author, h3 {
+      color: #484d52;
+    }
+    .quote {
+      @include quotes(#484d52);
+    }
+  }
+
+  &.light {
+    .author, h3 {
+      color: white;
+    }
+    .quote {
+      @include quotes(white);
+    }
+  }
+  
+
+  .limit-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+    justify-content: center;
+  }
+
+  .author {
+    font-size: 14px;
+    font-style: italic;
+    padding-left: 50px;
+  }
+
+  .link {
+    position: absolute;
+    right: 0;
+    bottom: 50px;
+    font-size: 12px;
+    font-style: italic;
+    display: none;
+  }
+
+  .quote {
+    &:before, &:after {
+      font-size: 60px;
+    }
+    h3 {
+      display: inline-block;
+      font-weight: 700;
+      font-size: 30px;
+      font-style: initial;
+    }
+  }
+}

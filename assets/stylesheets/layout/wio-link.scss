@@ -1,0 +1,27 @@
+
+.wio-link {
+  background-color: #363566!important;
+  color: white;
+  position: fixed;
+  z-index: 10000;
+  padding: 6px 10px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  bottom: 30px;
+  left: 30px;
+  height: 50px;
+  width: 50px!important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 7px 0 rgba(90,90,140,0.40);
+}
+.wio-link img {
+  display: none;
+}
+.wio-link:after {
+  font-family: 'Material Icons';
+  content: '\E3C9';
+  color: white;
+  font-size: 24px;
+}

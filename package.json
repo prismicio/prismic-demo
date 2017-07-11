@@ -1,0 +1,37 @@
+{
+  "name": "prismic-demo",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "npm run build:css; node app.js",
+    "dev": "npm run watch-css | nodemon app.js",
+    "prebuild:css": "node-sass ./assets/stylesheets/style.scss ./public/stylesheets/style.css",
+    "prefix:css": "postcss ./public/stylesheets/style.css --use autoprefixer --output ./public/stylesheets/style.css",
+    "build:css": "npm run prebuild:css; npm run prefix:css",
+    "watch-css": "watch 'npm run build:css' ./assets/stylesheets"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "cookies": "^0.7.0",
+    "debug": "^2.6.8",
+    "errorhandler": "^1.5.0",
+    "express": "^4.15.3",
+    "method-override": "^2.3.9",
+    "morgan": "^1.0.1",
+    "prismic-dom": "^1.2.8",
+    "prismic-javascript": "^1.1.0",
+    "pug": "^2.0.0-rc.1",
+    "serve-favicon": "^2.4.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/prismicio/prismic-demo.git"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.1.1",
+    "node-sass": "^4.5.3",
+    "nodemon": "^1.11.0",
+    "postcss": "^6.0.6",
+    "postcss-cli": "^4.1.0",
+    "watch": "^1.0.2"
+  }
+}
