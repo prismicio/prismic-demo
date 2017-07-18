@@ -45,9 +45,12 @@
 }
 
 
-@media (max-width: 1060px) {
+@media (max-width: 767px) {
   .site-header {
     padding-left: 20px;
     padding-right: 20px;
+    nav{
+      margin-top: 30px;
+    }
   }
 }

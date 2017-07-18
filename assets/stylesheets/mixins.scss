@@ -24,6 +24,8 @@
   
   &:after {
     content: close-quote;
+    position: relative;
+    top: 0.3em;
   }
 }
 
@@ -36,11 +38,17 @@
   text-transform: uppercase;
   color: $primary;
   background: $secondary;
-  border-radius: 2px;
+  border-radius: 4px;
+  a{
+    color: $primary;
+  }
 
   &:hover {
     color: $primaryHover;
     background-color: $secondaryHover;
     border-color: $borderHover;
+    a{
+      color: $primaryHover;
+    }
   }
 }
