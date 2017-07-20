@@ -1,0 +1,124 @@
+@import '../mixins';
+$break-small: 767px;
+
+.quote-banner {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 110px;
+
+  .container-text{
+    position: absolute;
+    top: 0;
+    padding: 110px;
+    bottom: 0;
+    width: 60%;
+    text-transform: uppercase;
+    right: 0;
+    
+    box-sizing: border-box;
+    vertical-align: middle;
+    background: rgba(51, 51, 51, 0.95);
+
+    .quote-container{
+        position: absolute;
+        left: 15%;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 15%;
+    }
+  }
+
+  &.dark {
+    .author, h3 {
+    }
+    .quote {
+      @include quotes(#484d52);
+    }
+  }
+
+  &.light {
+    .container-text{
+      background: rgba(255, 255, 255, 0.95);
+    }
+    .author, h3 {
+      display: inline-block;
+      font-weight: 900;
+      font-size: 35px;
+      line-height: 50px;
+      font-style: initial;
+      color: #aaa;
+    }
+    .quote {
+      @include quotes(#eee);
+      h3{
+        color: #333;
+      }
+    }
+  }
+  
+  
+
+  .limit-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+    justify-content: center;
+  }
+
+  .author {
+    font-size: 14px;
+    font-style: italic;
+    color: #ccc;
+    p{
+     margin-bottom: 0; 
+    } 
+  }
+
+  .quote {
+    &:before, &:after {
+      font-size: 60px;
+    }
+    h3 {
+      display: inline-block;
+      font-weight: 900;
+      font-size: 35px;
+      line-height: 45px;
+      font-style: initial;
+      color: #fff;
+    }
+
+  }
+  &.left{
+    .container-text{
+      left: 0;
+      right: auto;
+    }
+  }
+}
+
+@media screen and (max-width: $break-small) {
+
+  .quote-banner{
+    height: auto;
+    margin-bottom: 0;
+
+    .container-text{
+      width: 100%;
+      position: static;
+      .quote-container{
+
+      position: static;
+      transform: initial;
+      }
+    }
+  }
+
+}

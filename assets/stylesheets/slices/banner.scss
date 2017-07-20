@@ -1,18 +1,30 @@
 .banner {
   position: relative;
-  .cta-text {
+  img{
+    width: 100%;
+  }
+  .cta{
     position: absolute;
-    top: 90px;
-    left: 60px;
-    max-width: 400px;
-    font-size: 30px;
-    line-height: 40px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(0deg,rgba(0,0,0,.5) 0,rgba(0,0,0,.30) 40%,transparent);
+    padding: 30px 20px;
+    .cta-text {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
     color: white;
+    padding-top: 15px;
   }
   .cta-button {
-    @include button($primary: white, $secondary: #f05033, $border: #f05033, $primaryHover: #f05033, $secondaryHover: white, $borderHover: #f05033);
-    position: absolute;
-    bottom: 90px;
-    left: 60px;
+    color: white;
+    text-decoration: underline;
+    display: block;
+    padding: 5px 0 10px 0;
+    font-size: 13px;
+    line-height: 20px;
+    font-weight: 700;
+  }
   }
 }

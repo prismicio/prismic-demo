@@ -1,9 +1,17 @@
 .gallery {
+  margin-top: 50px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between; 
   .gallery-item {
-    flex: 0 1 48%;
+    flex: 0 1 30%;
+    text-align: center;
+    img{
+      width: 150px;
+      height: 150px;
+      margin-bottom: 50px;
+      border-radius: 50%;
+    }
   }
   .gallery-link {
     margin-top: -20px;

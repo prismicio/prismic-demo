@@ -7,19 +7,22 @@
   background-size: cover;
 
   .banner-content {
+    text-align: center;
+    max-width: 720px;
     .banner-title {
-      font-size: 50px;
-      line-height: 50px;
+      font-size: 70px;
+      line-height: 70px;
+      font-weight: 900;
       color: white;
     }
 
     p {
-      font-size: 20px;
+      font-size: 18px;
       color: white;
     }
 
     .banner-button {
-      @include button($primary: #f05033, $primaryHover: white, $secondaryHover: #f05033, $borderHover: #f05033);
+      @include button($primary: #333, $primaryHover: #333, $secondary : #fff, $border:#fff, $secondaryHover: #eee, $borderHover: #fff);
     }
   }
 }

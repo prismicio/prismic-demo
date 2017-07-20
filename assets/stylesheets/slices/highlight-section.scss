@@ -1,11 +1,13 @@
 @import '../mixins';
+$break-small: 767px;
+
 
 .highlight-section {
   margin-bottom: 80px;
   
   .illustration {
     display: inline-block;
-    width: 60%;
+    width: 50%;
     vertical-align: middle;
   }
 
@@ -13,32 +15,39 @@
     font-size: 13px;
     line-height: 1.7;
     letter-spacing: 0.6;
-    width: 40%;
+    width: 50%;
     display: inline-block;
     vertical-align: middle;
-    padding: 50px;
+    padding: 60px;
     box-sizing: border-box;
     position: relative;
 
     .title {
-      border-bottom: 3px solid grey;
       margin-bottom: 30px;
 
       h2 {
         position: relative;
-        left: -140px;
-        font-size: 70px;
-        width: 400px;
-        line-height: 80px;
+        font-size: 40px;
+        line-height: 50px;
       }
-    }
-
-    .desc {
-      max-width: 230px;
     }
     
     .action {
-      @include button($primary: #f05033, $primaryHover: white, $secondaryHover: #f05033, $borderHover: #f05033);
+      @include button($primary: #333, $primaryHover: white, $border : #333, $secondaryHover: #333, $borderHover: #333);
+    }
+  }
+}
+
+@media screen and (max-width: $break-small) {
+  .highlight-section{
+    .content{
+      display: block;
+      width: 100%;
+      padding: 50px 30px;
+    }
+    .illustration{
+      display: block;
+      width: 100%;
     }
   }
 }

@@ -9,13 +9,15 @@
 @import 'components/language-selector';
 
 //slices
-@import 'slices/banner-look';
+@import 'slices/quote-banner';
 @import 'slices/banner';
-@import 'slices/editorial-look';
+@import 'slices/featured-section';
 @import 'slices/gallery';
 @import 'slices/highlight-section';
 @import 'slices/text-section';
 @import 'slices/video';
+@import 'slices/image-gallery';
+
 
 //messy code, need to be cleaned
 @import 'toclean';
