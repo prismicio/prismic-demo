@@ -1,8 +1,9 @@
-.language-selector {
+.profile-selector {
   display: none;
   &.active {
-    display: block
+    display: inline-block;
   }
+
   .select-wrapper {
     border: 1px solid #adb9c5;
     border-radius: 3px;

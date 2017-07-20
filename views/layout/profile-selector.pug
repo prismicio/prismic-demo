@@ -1,0 +1,9 @@
+- var activeClass = PrismicProfiles.profiles && PrismicProfiles.profiles.length > 1 ? 'active' : '';
+.profile-selector(class=activeClass)
+  .select-wrapper
+    select
+      for profile in PrismicProfiles.profiles || []
+        
+        - var selected = profile.key === PrismicProfiles.current ? true : false;
+        option(value=profile.key selected=selected)
+          != profile.label

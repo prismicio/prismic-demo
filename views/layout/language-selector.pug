@@ -1,9 +1,8 @@
-.language-selector
-  - var activeClass = activeDoc && I18N.languages.length > 1 ? 'active' : '';
+- var activeClass = activeDoc && I18N.languages.length > 1 ? 'active' : '';
+.language-selector(class=activeClass)
   .select-wrapper
-    select(class=activeClass)
+    select
       for lang in I18N.languages
-        
         - var selected = lang.key === I18N.current ? true : false;
         - var alternateDocLink = activeDoc.alternate_languages.find(al => al.lang === lang.key);
         - var alternateUrl = selected ? ctx.linkResolver(activeDoc) : (alternateDocLink ? ctx.linkResolver(alternateDocLink) : '');

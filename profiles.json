@@ -1,0 +1,7 @@
+{
+  "profiles": [
+    {"key": "profile1", "label": "Profile 1"},
+    {"key": "profile2", "label": "Profile 2"}
+  ],
+  "default": "profile1"
+}

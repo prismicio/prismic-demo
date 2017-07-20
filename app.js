@@ -43,11 +43,19 @@ app.use((req, res, next) => {
   })
   .catch((error) => {
     //next with params handle error natively in express
-    next(error.message);
+    res.status(404).send(error.message);
   });
 });
 
-//middleware to setup I18N config for templates
+//middleware to setup prismic profiles
+app.use((req, res, next) => {
+  const cookies = new Cookies(req, res);
+  const profilesSettings = require('./profiles.json') || {};
+  res.locals.PrismicProfiles = Object.assign(profilesSettings, {current: cookies.get('prismic.profile') || profilesSettings.default});
+  console.log(res.locals.PrismicProfiles)
+  next();
+});
+
 app.use(I18NUrl(), (req, res, next) => {
   res.locals.I18N = Object.assign(I18N, {current: req.params.lang});
   next();
