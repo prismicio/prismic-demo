@@ -52,7 +52,6 @@ app.use((req, res, next) => {
   const cookies = new Cookies(req, res);
   const profilesSettings = require('./profiles.json') || {};
   res.locals.PrismicProfiles = Object.assign(profilesSettings, {current: cookies.get('prismic.profile') || profilesSettings.default});
-  console.log(res.locals.PrismicProfiles)
   next();
 });
 
