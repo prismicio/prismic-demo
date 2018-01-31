@@ -1,0 +1,5 @@
+section.image-hotspots.content-section.grid-container
+  div
+    img(src=slice.primary.base_image.url alt=slice.primary.base_image.alt)
+    each link in slice.items
+      a(href=link.product_link.image_url style="top:" + link.top + ";left:" + link.left + ";" target="_blank" rel="noopener") +

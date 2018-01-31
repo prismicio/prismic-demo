@@ -1,0 +1,15 @@
+section.featured-products-slice.content-section.grid-container
+  header
+    != RichText.asHtml(slice.primary.title, ctx.linkResolver)
+    != RichText.asHtml(slice.primary.description, ctx.linkResolver)
+  .featured-products-list
+    each item in slice.items
+      .product
+        img(src=item.select_a_product.image_url)
+        p
+          strong
+            != item.select_a_product.title
+        p
+          != item.select_a_product.description
+        .price
+          != item.select_a_product.price

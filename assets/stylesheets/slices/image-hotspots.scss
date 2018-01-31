@@ -1,0 +1,26 @@
+.image-hotspots {
+  text-align: center;
+
+  div {
+    position: relative;
+    margin: 0 auto;
+    width: 700;
+    
+    img {
+      width: 100%;
+    }
+    
+    a {
+      display: block;
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      font-size: 18px;
+      line-height: 15px;
+      background-color: black;
+      color: white;
+      border-radius: 40px;
+      cursor: pointer;
+    }
+  }
+}
