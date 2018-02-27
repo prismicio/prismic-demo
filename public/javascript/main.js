@@ -19,19 +19,4 @@ $(document).ready(function() {
     window.location.href = url;
   });
 
-  //profiles
-  var PROFILE_COOKIE = 'prismic.profile';
-  function setProfile(profile) {
-    window.Cookies.setItem(PROFILE_COOKIE, profile);
-  }
-  if(!Cookies.hasItem(PROFILE_COOKIE)) setProfile(window.PrismicProfiles.default);
-
-$('.profile-selector select').on('change', function(event) {
-    console.log(this)
-    const $select = $(this);
-    const $option = $select.find("option:selected", this);
-    const profile = $option.attr('value');
-    setProfile(profile);
-    window.location.reload();
-  });
 });
