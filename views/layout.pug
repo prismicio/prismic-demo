@@ -24,7 +24,8 @@ head
 
 body(data-wio-id=activeDoc.id)
 
-include ./layout/header.pug
+if menu
+  include ./layout/header.pug
 
 block body
 
