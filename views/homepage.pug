@@ -5,9 +5,9 @@ block variables
   - var activeDoc = home
 
 block body
-  
+
   .homepage
-    
+
     -// Homepage Banner Section
     section.homepage-banner(style='background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url(' + home.data.backgroundImage.url + ')')
       .banner-content.grid-container
@@ -29,14 +29,9 @@ block body
             include ./slices/banner.pug
           when 'banner_look'
             include ./slices/quote-banner.pug
-          when 'editorial_look'
-            include ./slices/featured-section.pug
           when 'text_section'
             include ./slices/text-section.pug
           when 'image_slider'
-            include ./slices/image-slider.pug 
-          when 'gallery'
-            include ./slices/gallery.pug
+            include ./slices/image-slider.pug
           when 'video'
             include ./slices/video.pug
-
