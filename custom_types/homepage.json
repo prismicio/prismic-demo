@@ -146,7 +146,7 @@
               }
             }
           },
-          "banner_look": {
+          "quote_banner": {
             "type": "Slice",
             "fieldset": "Quote Banner",
             "description": "A quote banner with a background image ",

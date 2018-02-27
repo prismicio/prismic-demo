@@ -131,7 +131,7 @@
               }
             }
           },
-          "banner_look" : {
+          "quote_banner" : {
             "type" : "Slice",
             "fieldset" : "Quote Banner",
             "description" : "A quote banner with a background image ",
@@ -262,7 +262,7 @@
               }
             },
             "repeat" : {
-              "select_a_product" : {
+              "product" : {
                 "type" : "IntegrationFields",
                 "config" : {
                   "catalog" : "made-beautiful-demo--made_updated_catalog",
