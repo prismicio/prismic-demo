@@ -262,6 +262,80 @@
                 }
               }
             }
+          },
+          "featured_products" : {
+            "type" : "Slice",
+            "fieldset" : "Featured Products",
+            "description" : "A list of Featured Products",
+            "icon" : "add_shopping_cart",
+            "non-repeat" : {
+              "title" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading2",
+                  "label" : "Title",
+                  "placeholder" : "Title of the product selection"
+                }
+              },
+              "description" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "paragraph",
+                  "label" : "Description",
+                  "placeholder" : "Description of the product selection"
+                }
+              }
+            },
+            "repeat" : {
+              "product" : {
+                "type" : "IntegrationFields",
+                "config" : {
+                  "catalog" : "made-beautiful-demo--made_updated_catalog",
+                  "label" : "Catalog product",
+                  "placeholder" : "Select a product from the catalog"
+                }
+              }
+            }
+          },
+          "image_hotspots" : {
+            "type" : "Slice",
+            "fieldset" : "Image Hotspots",
+            "description" : "Images with hotspots for featured products",
+            "icon" : "photo_filter",
+            "non-repeat" : {
+              "base_image" : {
+                "type" : "Image",
+                "config" : {
+                  "constraint" : { },
+                  "thumbnails" : [ ],
+                  "label" : "Base image"
+                }
+              }
+            },
+            "repeat" : {
+              "product_link" : {
+                "type" : "IntegrationFields",
+                "config" : {
+                  "catalog" : "made-beautiful-demo--made_updated_catalog",
+                  "label" : "Product Link",
+                  "placeholder" : "Select a product link"
+                }
+              },
+              "top" : {
+                "type" : "Number",
+                "config" : {
+                  "label" : "Top",
+                  "placeholder" : "Position from the top"
+                }
+              },
+              "left" : {
+                "type" : "Number",
+                "config" : {
+                  "label" : "left",
+                  "placeholder" : "Position from the left"
+                }
+              }
+            }
           }
         }
       }
