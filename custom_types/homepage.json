@@ -287,12 +287,12 @@
               }
             },
             "repeat" : {
-              "product" : {
-                "type" : "IntegrationFields",
-                "config" : {
-                  "catalog" : "made-beautiful-demo--made_updated_catalog",
-                  "label" : "Catalog product",
-                  "placeholder" : "Select a product from the catalog"
+              "product": {
+                "type": "IntegrationFields",
+                "config": {
+                  "catalog": "jbdb-prismic-demo--product_catalog",
+                  "label": "Product",
+                  "placeholder": "Select a product from the catalog"
                 }
               }
             }
@@ -313,12 +313,12 @@
               }
             },
             "repeat" : {
-              "product_link" : {
-                "type" : "IntegrationFields",
-                "config" : {
-                  "catalog" : "made-beautiful-demo--made_updated_catalog",
-                  "label" : "Product Link",
-                  "placeholder" : "Select a product link"
+              "product": {
+                "type": "IntegrationFields",
+                "config": {
+                  "catalog": "jbdb-prismic-demo--product_catalog",
+                  "label": "Product",
+                  "placeholder": "Select a product from the catalog"
                 }
               },
               "top" : {
