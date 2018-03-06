@@ -1,31 +1,43 @@
 {
   "Main" : {
-    "title" : {
-      "type" : "StructuredText",
+    "logo" : {
+      "type" : "Image",
       "config" : {
-        "placeholder" : "Menu title...",
-        "single" : "heading1"
+        "constraint" : { },
+        "thumbnails" : [ ],
+        "label" : "Logo"
       }
     },
-    "menuLinks" : {
-      "type" : "Group",
-      "fieldset" : "Menu Links",
+    "name" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading1",
+        "label" : "Name",
+        "placeholder" : "Name"
+      }
+    },
+    "items" : {
       "config" : {
         "fields" : {
           "label" : {
-            "type" : "Text",
             "config" : {
-              "placeholder" : "Link label"
-            }
+              "placeholder" : "Label",
+              "label" : "Label"
+            },
+            "type" : "Text"
           },
           "link" : {
-            "type" : "Link",
             "config" : {
-              "placeholder" : "Link"
-            }
+              "placeholder" : "Link",
+              "label" : "Link"
+            },
+            "type" : "Link"
           }
-        }
-      }
+        },
+        "label" : "Items"
+      },
+      "type" : "Group",
+      "fieldset" : "Menu Links"
     }
   }
 }

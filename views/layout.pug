@@ -17,17 +17,15 @@ head
   script(src="//code.jquery.com/jquery-2.1.1.min.js")
   script
     = ctx?"window.prismic = { endpoint: '" + ctx.endpoint + "' };":""
-  script(type="text/javascript").
-    window.PrismicProfiles = !{JSON.stringify(PrismicProfiles)}
   script(src="//static.cdn.prismic.io/prismic.min.js")
   script(src='/javascript/lightSlider/js/lightslider.js')
-  script(src='/javascript/cookies.js')
   script(src='/javascript/main.js')
 
 body(data-wio-id=activeDoc.id)
 
-include ./layout/header.pug
-  
+if menu
+  include ./layout/header.pug
+
 block body
-  
+
 include ./layout/footer.pug

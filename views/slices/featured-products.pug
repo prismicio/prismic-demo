@@ -5,11 +5,11 @@ section.featured-products-slice.content-section.grid-container
   .featured-products-list
     each item in slice.items
       .product
-        img(src=item.select_a_product.image_url)
+        img(src=item.product.image_url)
         p
           strong
-            != item.select_a_product.title
+            != item.product.title
         p
-          != item.select_a_product.description
+          != item.product.description
         .price
-          != item.select_a_product.price
+          != item.product.price

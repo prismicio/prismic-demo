@@ -131,7 +131,7 @@
               }
             }
           },
-          "banner_look" : {
+          "quote_banner" : {
             "type" : "Slice",
             "fieldset" : "Quote Banner",
             "description" : "A quote banner with a background image ",
@@ -186,62 +186,6 @@
               }
             }
           },
-          "editorial_look" : {
-            "type" : "Slice",
-            "fieldset" : "Featured Section",
-            "description" : "A featured section with title, text and portrait image",
-            "icon" : "art_track",
-            "non-repeat" : {
-              "title" : {
-                "type" : "StructuredText",
-                "config" : {
-                  "single" : "heading2",
-                  "label" : "Title",
-                  "placeholder" : "Look's name"
-                }
-              },
-              "text" : {
-                "type" : "StructuredText",
-                "config" : {
-                  "multi" : "paragraph",
-                  "label" : "Text",
-                  "placeholder" : "The look's story"
-                }
-              },
-              "image" : {
-                "type" : "Image",
-                "config" : {
-                  "constraint" : {
-                    "width" : 710,
-                    "height" : 920
-                  },
-                  "thumbnails" : [ {
-                    "name" : "Mobile",
-                    "width" : 290,
-                    "height" : 380
-                  } ],
-                  "label" : "Image"
-                }
-              },
-              "text_position" : {
-                "type" : "Select",
-                "config" : {
-                  "options" : [ "Right", "Left" ],
-                  "label" : "Text position",
-                  "placeholder" : "Text position"
-                }
-              }
-            },
-            "repeat" : {
-              "look_link" : {
-                "type" : "Embed",
-                "config" : {
-                  "label" : "Look link",
-                  "placeholder" : "Paste a product's URL"
-                }
-              }
-            }
-          },
           "text_section" : {
             "type" : "Slice",
             "fieldset" : "Text Section",
@@ -274,44 +218,6 @@
                     "width" : 980,
                     "height" : 400
                   }
-                }
-              }
-            }
-          },
-          "gallery" : {
-            "type" : "Slice",
-            "fieldset" : "Image Gallery",
-            "description" : "Standard image gallery to display a bunch of photos in a grid",
-            "icon" : "photo_library",
-            "repeat" : {
-              "image" : {
-                "type" : "Image",
-                "config" : {
-                  "placeholder" : "Image",
-                  "constraint" : {
-                    "width" : 727,
-                    "height" : 402
-                  }
-                }
-              },
-              "description" : {
-                "type" : "StructuredText",
-                "config" : {
-                  "placeholder" : "Image Description...",
-                  "single" : "paragraph"
-                }
-              },
-              "link" : {
-                "type" : "Link",
-                "fieldset" : "Optional Link",
-                "config" : {
-                  "placeholder" : "Optional Link"
-                }
-              },
-              "linkText" : {
-                "type" : "Text",
-                "config" : {
-                  "placeholder" : "Optional Link Text"
                 }
               }
             }
@@ -356,11 +262,11 @@
               }
             },
             "repeat" : {
-              "select_a_product" : {
+              "product" : {
                 "type" : "IntegrationFields",
                 "config" : {
-                  "catalog" : "made-beautiful-demo--made_updated_catalog",
-                  "label" : "Catalog product",
+                  "catalog" : "jbdb-prismic-demo--product_catalog",
+                  "label" : "Product",
                   "placeholder" : "Select a product from the catalog"
                 }
               }
@@ -382,12 +288,12 @@
               }
             },
             "repeat" : {
-              "product_link" : {
+              "product" : {
                 "type" : "IntegrationFields",
                 "config" : {
-                  "catalog" : "made-beautiful-demo--made_updated_catalog",
-                  "label" : "Product Link",
-                  "placeholder" : "Select a product link"
+                  "catalog" : "jbdb-prismic-demo--product_catalog",
+                  "label" : "Product",
+                  "placeholder" : "Select a product from the catalog"
                 }
               },
               "top" : {

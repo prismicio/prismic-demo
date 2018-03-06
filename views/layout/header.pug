@@ -1,16 +1,15 @@
 header(class=[nav_class || '', "site-header", "grid-container"].join(' '))
   - var homeUrl = `/${I18N.current}`;
-  a(href=homeUrl)
-    .logo
-      != RichText.asText(menu.data.title)
-  
+  a.brand(href=homeUrl)
+    if menu.data.logo.url
+      img.logo(src=menu.data.logo.url, alt=menu.data.logo.alt)
+    div.name
+      != RichText.asText(menu.data.name)
   nav
     ul
-      if menu
-        each linkItem in menu.data.menuLinks
-          li
-            a(href=Link.url(linkItem.link, ctx.linkResolver))
-              != linkItem.label
-        
-        li.lang
-          include ./language-selector
+      each item in menu.data.items
+        li
+          a(href=Link.url(item.link, ctx.linkResolver))
+            != item.label
+      li.lang
+        include ./language-selector
