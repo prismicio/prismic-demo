@@ -47,14 +47,6 @@ app.use((req, res, next) => {
   });
 });
 
-//middleware to setup prismic profiles
-app.use((req, res, next) => {
-  const cookies = new Cookies(req, res);
-  const profilesSettings = require('./profiles.json') || {};
-  res.locals.PrismicProfiles = Object.assign(profilesSettings, {current: cookies.get('prismic.profile') || profilesSettings.default});
-  next();
-});
-
 app.use(I18NUrl(), (req, res, next) => {
   res.locals.I18N = Object.assign(I18N, {current: req.params.lang});
   next();
@@ -91,7 +83,7 @@ app.get(I18NUrl('/'), (req, res, next) => {
 // Route for pages
 app.get(I18NUrl('/page/:uid'), (req, res, next) => {
   const uid = req.params.uid;
-  
+
   req.prismic.api.getByUID("page", uid, I18NConfig(req))
   .then((page) => {
     if(!page) res.status(404).send('page not found');

@@ -1,0 +1,35 @@
+.featured-products-slice {
+  text-align: center;
+
+  header {
+    p {
+      margin: 0;
+    }
+  }
+
+  .featured-products-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+  
+    .product {
+      margin-top: 50px;
+      width: 300px;
+      width: 50%;
+
+      @media (max-width: 680px) {
+        width: 100%;
+      }
+  
+      img {
+        margin-bottom: 10px;
+        max-width: 300px;
+        max-height: 300px;
+      }
+
+      p {
+        margin: 0;
+      }
+    }
+  }
+}

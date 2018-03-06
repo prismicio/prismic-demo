@@ -1,0 +1,15 @@
+section.content-section.grid-container
+  div.ih-box
+    img.ih-img(src=slice.primary.base_image.url alt=slice.primary.base_image.alt)
+    each item in slice.items
+      div.ih-spot(style="top: " + item.top + "px; left: " + item.left + "px;")
+        div.ih-spot-board
+          img.ih-spot-board-img(src=item.product.image_url alt=item.product.title)
+          div.ih-spot-board-content
+            div.ih-spot-board-title
+              != item.product.title
+            div.ih-spot-board-desc
+              != item.product.description
+            a.ih-spot-board-cta(href=item.product.image_url target="_blank" rel="noopener") Details
+        div.ih-spot-target
+          div.icon +

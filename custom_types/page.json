@@ -1,10 +1,26 @@
 {
   "Main" : {
+    "page_title" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading1",
+        "label" : "Page title",
+        "placeholder" : "Guide title"
+      }
+    },
     "uid" : {
       "type" : "UID",
       "config" : {
         "placeholder" : "meaningful-unique-identifier...",
         "label" : "Unique ID"
+      }
+    },
+    "hero_image" : {
+      "type" : "Image",
+      "config" : {
+        "constraint" : { },
+        "thumbnails" : [ ],
+        "label" : "Hero image"
       }
     },
     "body" : {
@@ -21,314 +37,277 @@
           } ]
         },
         "choices" : {
-          "highlight_section": {
-            "type": "Slice",
-            "fieldset": "Featured with CTA",
-            "description": "A featured section with image on one side and text with title and CTA on the other side.",
-            "icon": "art_track",
-            "non-repeat": {
-              "image": {
-                "type": "Image",
-                "config": {
-                  "constraint": {
-                    "width": 1080,
-                    "height": 1360
+          "highlight_section" : {
+            "type" : "Slice",
+            "fieldset" : "Featured with CTA",
+            "description" : "A featured section with image on one side and text with title and CTA on the other side.",
+            "icon" : "art_track",
+            "non-repeat" : {
+              "image" : {
+                "type" : "Image",
+                "config" : {
+                  "constraint" : {
+                    "width" : 1080,
+                    "height" : 1360
                   },
-                  "thumbnails": [
-                    {
-                      "name": "Mobile",
-                      "width": 290,
-                      "height": 360
-                    }
-                  ],
-                  "label": "Image"
+                  "thumbnails" : [ {
+                    "name" : "Mobile",
+                    "width" : 290,
+                    "height" : 360
+                  } ],
+                  "label" : "Image"
                 }
               },
-              "title": {
-                "type": "StructuredText",
-                "config": {
-                  "single": "heading2",
-                  "label": "Title",
-                  "placeholder": "Section's title goes here"
+              "title" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading2",
+                  "label" : "Title",
+                  "placeholder" : "Section's title goes here"
                 }
               },
-              "description": {
-                "type": "StructuredText",
-                "config": {
-                  "multi": "paragraph",
-                  "label": "Description",
-                  "placeholder": "My description"
+              "description" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "paragraph",
+                  "label" : "Description",
+                  "placeholder" : "My description"
                 }
               },
-              "button_label": {
-                "type": "StructuredText",
-                "config": {
-                  "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
-                  "label": "Button label",
-                  "placeholder": "Click Here"
+              "button_label" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
+                  "label" : "Button label",
+                  "placeholder" : "Click Here"
                 }
               },
-              "button_link": {
-                "type": "Link",
-                "config": {
-                  "label": "Button Link",
-                  "placeholder": "Select the link"
+              "button_link" : {
+                "type" : "Link",
+                "config" : {
+                  "label" : "Button Link",
+                  "placeholder" : "Select the link"
                 }
               }
             },
-            "repeat": {}
+            "repeat" : { }
           },
-          "banner": {
-            "type": "Slice",
-            "fieldset": "CTA Banner",
-            "description": "A call to action banner with background",
-            "icon": "ondemand_video",
-            "non-repeat": {
-              "title": {
-                "type": "StructuredText",
-                "config": {
-                  "placeholder": "Banner text...",
-                  "single": "heading2"
+          "banner" : {
+            "type" : "Slice",
+            "fieldset" : "CTA Banner",
+            "description" : "A call to action banner with background",
+            "icon" : "ondemand_video",
+            "non-repeat" : {
+              "title" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "placeholder" : "Banner text...",
+                  "single" : "heading2"
                 }
               },
-              "link": {
-                "type": "Link",
-                "fieldset": "Button Link",
-                "config": {
-                  "placeholder": "Optional Link"
+              "link" : {
+                "type" : "Link",
+                "fieldset" : "Button Link",
+                "config" : {
+                  "placeholder" : "Optional Link"
                 }
               },
-              "linkText": {
-                "type": "StructuredText",
-                "config": {
-                  "placeholder": "Button Label",
-                  "single": "paragraph"
+              "linkText" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "placeholder" : "Button Label",
+                  "single" : "paragraph"
                 }
               },
-              "image": {
-                "type": "Image",
-                "fieldset": "Image large",
-                "config": {
-                  "constraint": {
-                    "width": 980,
-                    "height": 300
+              "image" : {
+                "type" : "Image",
+                "fieldset" : "Image large",
+                "config" : {
+                  "constraint" : {
+                    "width" : 980,
+                    "height" : 300
                   }
                 }
               }
             }
           },
-          "banner_look": {
-            "type": "Slice",
-            "fieldset": "Quote Banner",
-            "description": "A quote banner with a background image ",
-            "icon": "format_quote",
-            "non-repeat": {
-              "background_image": {
-                "type": "Image",
-                "config": {
-                  "constraint": {
-                    "width": 2000,
-                    "height": 600
+          "quote_banner" : {
+            "type" : "Slice",
+            "fieldset" : "Quote Banner",
+            "description" : "A quote banner with a background image ",
+            "icon" : "format_quote",
+            "non-repeat" : {
+              "background_image" : {
+                "type" : "Image",
+                "config" : {
+                  "constraint" : {
+                    "width" : 2000,
+                    "height" : 600
                   },
-                  "thumbnails": [
-                    {
-                      "name": "Mobile",
-                      "width": 370,
-                      "height": 260
-                    }
-                  ],
-                  "label": "Background image"
+                  "thumbnails" : [ {
+                    "name" : "Mobile",
+                    "width" : 370,
+                    "height" : 260
+                  } ],
+                  "label" : "Background image"
                 }
               },
-              "quote": {
-                "type": "StructuredText",
-                "config": {
-                  "single": "heading3",
-                  "label": "Quote",
-                  "placeholder": "Designer's quote"
+              "quote" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading3",
+                  "label" : "Quote",
+                  "placeholder" : "Designer's quote"
                 }
               },
-              "quote_author": {
-                "type": "StructuredText",
-                "config": {
-                  "single": "paragraph",
-                  "label": "Quote author",
-                  "placeholder": "Fashion designer - Jane Doe"
+              "quote_author" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "paragraph",
+                  "label" : "Quote author",
+                  "placeholder" : "Fashion designer - Jane Doe"
                 }
               },
-              "quote_position": {
-                "type": "Select",
-                "config": {
-                  "options": [
-                    "Right",
-                    "Left"
-                  ],
-                  "label": "Quote position",
-                  "placeholder": "Quote position"
+              "quote_position" : {
+                "type" : "Select",
+                "config" : {
+                  "options" : [ "Right", "Left" ],
+                  "label" : "Quote position",
+                  "placeholder" : "Quote position"
                 }
               },
-              "quote_style": {
-                "type": "Select",
-                "config": {
-                  "options": [
-                    "dark",
-                    "light"
-                  ],
-                  "label": "quote_style",
-                  "placeholder": "style"
+              "quote_style" : {
+                "type" : "Select",
+                "config" : {
+                  "options" : [ "dark", "light" ],
+                  "label" : "quote_style",
+                  "placeholder" : "style"
                 }
               }
             }
           },
-          "editorial_look": {
-            "type": "Slice",
-            "fieldset": "Featured Section",
-            "description": "A featured section with title, text and portrait image",
-            "icon": "art_track",
-            "non-repeat": {
-              "title": {
-                "type": "StructuredText",
-                "config": {
-                  "single": "heading2",
-                  "label": "Title",
-                  "placeholder": "Look's name"
+          "text_section" : {
+            "type" : "Slice",
+            "fieldset" : "Text Section",
+            "description" : "This is a rich text section",
+            "icon" : "text_fields",
+            "non-repeat" : {
+              "text" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "placeholder" : "type your text here...",
+                  "labels" : {
+                    "" : [ {
+                      "name" : "quote"
+                    } ]
+                  }
+                }
+              }
+            }
+          },
+          "image_slider" : {
+            "type" : "Slice",
+            "fieldset" : "Image Slider",
+            "description" : "A slider rotating images",
+            "icon" : "image",
+            "repeat" : {
+              "image" : {
+                "type" : "Image",
+                "config" : {
+                  "constraint" : {
+                    "width" : 980,
+                    "height" : 400
+                  }
+                }
+              }
+            }
+          },
+          "video" : {
+            "type" : "Slice",
+            "fieldset" : "Video",
+            "description" : "Embed video from any source like Youtube, Vimeo, Facebook...",
+            "icon" : "ondemand_video",
+            "non-repeat" : {
+              "embed" : {
+                "type" : "Embed",
+                "fieldset" : "Video",
+                "config" : {
+                  "label" : "Video",
+                  "placeholder" : "Paste the YouTube or Vimeo url here..."
+                }
+              }
+            }
+          },
+          "featured_products" : {
+            "type" : "Slice",
+            "fieldset" : "Featured Products",
+            "description" : "A list of Featured Products",
+            "icon" : "add_shopping_cart",
+            "non-repeat" : {
+              "title" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading2",
+                  "label" : "Title",
+                  "placeholder" : "Title of the product selection"
                 }
               },
-              "text": {
-                "type": "StructuredText",
-                "config": {
-                  "multi": "paragraph",
-                  "label": "Text",
-                  "placeholder": "The look's story"
-                }
-              },
-              "image": {
-                "type": "Image",
-                "config": {
-                  "constraint": {
-                    "width": 710,
-                    "height": 920
-                  },
-                  "thumbnails": [
-                    {
-                      "name": "Mobile",
-                      "width": 290,
-                      "height": 380
-                    }
-                  ],
-                  "label": "Image"
-                }
-              },
-              "text_position": {
-                "type": "Select",
-                "config": {
-                  "options": [
-                    "Right",
-                    "Left"
-                  ],
-                  "label": "Text position",
-                  "placeholder": "Text position"
+              "description" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "paragraph",
+                  "label" : "Description",
+                  "placeholder" : "Description of the product selection"
                 }
               }
             },
-            "repeat": {
-              "look_link": {
-                "type": "Embed",
-                "config": {
-                  "label": "Look link",
-                  "placeholder": "Paste a product's URL"
+            "repeat" : {
+              "product" : {
+                "type" : "IntegrationFields",
+                "config" : {
+                  "catalog" : "jbdb-prismic-demo--product_catalog",
+                  "label" : "Product",
+                  "placeholder" : "Select a product from the catalog"
                 }
               }
             }
           },
-          "text_section": {
-            "type": "Slice",
-            "fieldset": "Text Section",
-            "description": "This is a rich text section",
-            "icon": "text_fields",
-            "non-repeat": {
-              "text": {
-                "type": "StructuredText",
-                "config": {
-                  "placeholder": "type your text here...",
-                  "labels": {
-                    "": [
-                      {
-                        "name": "quote"
-                      }
-                    ]
-                  }
+          "image_hotspots" : {
+            "type" : "Slice",
+            "fieldset" : "Image Hotspots",
+            "description" : "Images with hotspots for featured products",
+            "icon" : "photo_filter",
+            "non-repeat" : {
+              "base_image" : {
+                "type" : "Image",
+                "config" : {
+                  "constraint" : { },
+                  "thumbnails" : [ ],
+                  "label" : "Base image"
                 }
               }
-            }
-          },
-          "image_slider": {
-            "type": "Slice",
-            "fieldset": "Image Slider",
-            "description": "A slider rotating images",
-            "icon": "image",
-            "repeat": {
-              "image": {
-                "type": "Image",
-                "config": {
-                  "constraint": {
-                    "width": 980,
-                    "height": 400
-                  }
-                }
-              }
-            }
-          },
-          "gallery": {
-            "type": "Slice",
-            "fieldset": "Image Gallery",
-            "description": "Standard image gallery to display a bunch of photos in a grid",
-            "icon": "photo_library",
-            "repeat": {
-              "image": {
-                "type": "Image",
-                "config": {
-                  "placeholder": "Image",
-                  "constraint": {
-                    "width": 727,
-                    "height": 402
-                  }
+            },
+            "repeat" : {
+              "product" : {
+                "type" : "IntegrationFields",
+                "config" : {
+                  "catalog" : "jbdb-prismic-demo--product_catalog",
+                  "label" : "Product",
+                  "placeholder" : "Select a product from the catalog"
                 }
               },
-              "description": {
-                "type": "StructuredText",
-                "config": {
-                  "placeholder": "Image Description...",
-                  "single": "paragraph"
+              "top" : {
+                "type" : "Number",
+                "config" : {
+                  "label" : "Top",
+                  "placeholder" : "Position from the top"
                 }
               },
-              "link": {
-                "type": "Link",
-                "fieldset": "Optional Link",
-                "config": {
-                  "placeholder": "Optional Link"
-                }
-              },
-              "linkText": {
-                "type": "Text",
-                "config": {
-                  "placeholder": "Optional Link Text"
-                }
-              }
-            }
-          },
-          "video": {
-            "type": "Slice",
-            "fieldset": "Video",
-            "description": "Embed video from any source like Youtube, Vimeo, Facebook...",
-            "icon": "ondemand_video",
-            "non-repeat": {
-              "embed": {
-                "type": "Embed",
-                "fieldset": "Video",
-                "config": {
-                  "label": "Video",
-                  "placeholder": "Paste the YouTube or Vimeo url here..."
+              "left" : {
+                "type" : "Number",
+                "config" : {
+                  "label" : "left",
+                  "placeholder" : "Position from the left"
                 }
               }
             }

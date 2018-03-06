@@ -45,10 +45,7 @@ It's meant to work with API v2 libs here:
 [5. Implement I18N](#implement-i18n)
 -----------------------------------------------------
 
-[6. Manage profiles](#manage-profiles)
------------------------------------------------------
-
-[7. License](#license)
+[6. License](#license)
 -----------------------------------------------------
 
 ===================================================
@@ -548,29 +545,6 @@ You got 4 things to check if you wanna customize it:
 - **I18NUrl(partialURL?: String) => String**: It's a helper to build your URL. You just provide a url and the helper with prefix it with a regex to match the declared language from **i18n.json**. It's optional so you can provide anything and it will match every i18n URLs. It can be useful for middlewares.
 - **I18NConfig(request: Request, options?: Object) => String**: It's a helper that help you build your queries configuration. It will take a request to get the language automatically but also an optional object with custom options that will be merged all together.
 - **LinkResolver**: Don't forget to update the linkResolver to add the language in the url. There's already an example. you have a property **lang** in each documentLink.
-
-### Manage Profiles
-In this demo, you can manage different profiles of users out of the box.
-It's handled with a basic cookies system. You can just switch profile directly in the footer and it will set a new profile.
-
-*How it works?*
-You must set your profiles in `profiles.json` according to the example in this file.
-Each time you switch profile from the select in the footer, it create a cookie `prismic.profile` with the value of the profile you just selected.
-You have now an easy access to the current profile directly from the cookies.
-You can access it from the back with the following code:
-```javascript
-  res.locals.PrismicProfiles.current
-```
-You can also access the list of all profiles:
-```javascript
-  res.locals.PrismicProfiles.profiles
-```
-But also the default profile:
-```javascript
-  res.locals.PrismicProfiles.default
-```
-
-And finally you can access the same `PrismicProfiles` object from the client in `window.PrismicProfiles`. It contains exactly the same thing.
 
 ### License
 
