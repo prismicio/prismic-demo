@@ -9,6 +9,10 @@
     "build:css": "npm run prebuild:css; npm run prefix:css",
     "watch-css": "watch 'npm run build:css' ./assets/stylesheets"
   },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/prismicio/prismic-demo.git"
+  },
   "dependencies": {
     "body-parser": "^1.17.2",
     "cookies": "^0.7.0",
@@ -21,10 +25,6 @@
     "prismic-javascript": "^1.1.0",
     "pug": "^2.0.0-rc.1",
     "serve-favicon": "^2.4.3"
-  },
-  "repository": {
-    "type": "git",
-    "url": "http://github.com/prismicio/prismic-demo.git"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.1",

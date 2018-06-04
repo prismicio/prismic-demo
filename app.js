@@ -91,7 +91,7 @@ app.get(I18NUrl('/'), (req, res, next) => {
 // Route for pages
 app.get(I18NUrl('/page/:uid'), (req, res, next) => {
   const uid = req.params.uid;
-  
+
   req.prismic.api.getByUID("page", uid, I18NConfig(req))
   .then((page) => {
     if(!page) res.status(404).send('page not found');
